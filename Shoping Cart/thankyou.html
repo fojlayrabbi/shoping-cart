@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Shopping</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6" onload="clearCart()">
+
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded shadow-md text-center">
+        <h1 class="text-3xl font-bold mb-4">Thank You for Shopping!</h1>
+        <p class="text-lg text-gray-600 mb-6">We hope you had a great experience shopping with us.</p>
+
+        <!-- Buttons to continue shopping or go to home -->
+        <div class="space-x-4">
+            <a href="index.html" class="bg-blue-500 text-white px-6 py-3 rounded shadow-lg hover:bg-blue-600">
+                Go to Home
+            </a>
+            <a href="index.html" class="bg-gray-500 text-white px-6 py-3 rounded shadow-lg hover:bg-gray-600">
+                Continue Shopping
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function clearCart() {
+            localStorage.removeItem("cart"); // Remove cart from local storage
+        }
+    </script>
+
+</body>
+</html>
+

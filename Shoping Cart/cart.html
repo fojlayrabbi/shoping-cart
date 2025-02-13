@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+    <h1 class="text-3xl font-bold text-center mb-6">Your Cart</h1>
+
+    <!-- Cart Items -->
+    <div id="cart-items" class="max-w-3xl mx-auto bg-white p-6 rounded shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Cart Items</h2>
+        <div id="cart-list"></div>
+
+        <!-- Display total items and total value -->
+        <div class="flex justify-between mt-4">
+            <p class="text-lg font-semibold">Total Items: <span id="cart-total-items">0</span></p>
+            <p class="text-lg font-semibold">Total Value: $<span id="cart-total-value">0</span></p>
+        </div>
+    </div>
+
+    <!-- Checkout Button -->
+    <div class="text-center mt-6">
+        <a href="thankyou.html" class="bg-green-500 text-white px-6 py-3 rounded shadow-lg hover:bg-green-600">
+            Proceed to Checkout
+        </a>
+    </div>
+
+    <script>
+        function clearCart() {
+            localStorage.removeItem("cart"); // Remove cart from local storage
+        }
+    </script>
+
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

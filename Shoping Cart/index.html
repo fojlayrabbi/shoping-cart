@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <img src="/images/download.jpg" alt="Shop Logo"> 
+            <span>MyShop</span>
+        </a>
+
+        <!-- Navbar Links & Search -->
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+
+            <!-- Search Bar -->
+            <li>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search products..." onkeyup="filterProducts()">
+                    <button>🔍</button>
+                </div>
+            </li>
+
+            <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+
+    <!-- Product List -->
+    <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6"></div>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+</html>
